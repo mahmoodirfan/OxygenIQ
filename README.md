@@ -1,76 +1,59 @@
-# OxygenIQ
+**OxygenIQ - Air Quality Monitoring Application**
 
-**OxygenIQ** is an air quality monitoring web application that provides real-time air quality data from locations around the world. It uses a clean, responsive interface to display air quality data on a map and allows users to search for air quality by inputting geographic coordinates. 
+OxygenIQ is an interactive web application that provides real-time air quality data from various locations around the world. The app leverages the OpenAQ API to display data on pollutants like PM2.5 and PM10, and provides an intuitive, interactive map for users to select locations or input coordinates manually to retrieve air quality information.
 
-## Features
+Features
+Real-Time Data: Fetch air quality data from OpenAQ, displaying pollutant levels such as PM2.5, PM10, and more.
+Interactive Map: Users can select locations by clicking on an interactive map.
+Manual Input: Users can also manually input latitude and longitude coordinates to fetch air quality data for specific locations.
+AQI Legend: A legend that shows the Air Quality Index (AQI) categories, indicating whether the air quality is good, moderate, or hazardous.
+Responsive Design: The app adapts to different screen sizes for an optimal user experience on all devices.
 
-- Real-time air quality data fetching using OpenAQ API.
-- Interactive map showing multiple monitoring stations.
-- User-friendly interface for coordinate-based air quality search.
-- Visual representation of air quality levels (AQI Legend).
-- Dynamic data presentation for pollutants like PM2.5, PM10, and more.
-- Styled with a modern UI and responsive design.
+**Frontend:**
+React: Used for building the dynamic user interface.
+Leaflet.js: Used for displaying the interactive map.
+Axios: Handles HTTP requests to the backend.
+Bootstrap: Provides responsive styling and layout.
 
-## Technologies Used
+**Backend:**
+Flask: Python web framework used to build the backend.
+Flask-CORS: Handles Cross-Origin Resource Sharing, allowing the frontend to interact with the backend.
+OpenAQ API: External API used to fetch real-time air quality data.
 
-- **Frontend**: React.js, Leaflet.js (for maps)
-- **Backend**: Flask (API proxy for OpenAQ)
-- **Other**: Bootstrap, Axios (for HTTP requests)
+**Installation and Setup**
+Prerequisites
+Node.js and npm for the frontend.
+Python 3 for the backend.
+OpenAQ API key (stored in the .env file).
 
-## Getting Started
+Backend (Flask)
+Clone the repository:
+git clone https://github.com/mahmoodirfan/OxygenIQ.git
 
-### Prerequisites
-To run this project locally, ensure you have the following installed:
+Navigate to the backend directory:
+cd backend
 
-- Node.js (for React app)
-- Python (for Flask backend)
+Install the necessary Python dependencies:
+pip install -r requirements.txt
 
-### Installation
+Create a .env file in the backend directory and add your OpenAQ API key:
+API_KEY=your_openaq_api_key
 
-1. Clone this repository:
-    ```bash
-    git clone https://github.com/mahmoodirfan/OxygenIQ.git
-    ```
+Run the Flask backend:
 
-2. Navigate to the `frontend` folder and install dependencies:
-    ```bash
-    cd frontend
-    npm install
-    ```
+python app.py
 
-3. Start the frontend server:
-    ```bash
-    npm start
-    ```
+Frontend (React)
+Navigate to the frontend directory:
+cd frontend
 
-4. Navigate to the `backend` folder, set up your Flask environment and install dependencies:
-    ```bash
-    cd backend
-    pip install -r requirements.txt
-    ```
+Install the required dependencies using npm:
+npm install
 
-5. Start the backend server:
-    ```bash
-    python app.py
-    ```
-
-### Environment Variables
-
-You need to configure the following environment variables for the project:
-
-- **API_KEY**: Get your OpenAQ API key and add it to the backend `.env` file.
-
-API_KEY=<Your OpenAQ API Key>
+Start the frontend development server:
+npm start
 
 Usage
-Once both the frontend and backend are running:
-Open your browser and go to http://localhost:3000 to use the app.
-Enter coordinates or click on a map marker to fetch real-time air quality data.
-
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-
-Acknowledgements
-OpenAQ API for providing real-time air quality data.
-Leaflet for interactive maps.
-Developed by Irfan Mahmood.
+Open your browser and navigate to http://localhost:3000.
+You can either click on the map or manually enter latitude and longitude coordinates to fetch air quality data.
+View the Air Quality Index (AQI) and detailed pollutant information on the right panel of the interface.
