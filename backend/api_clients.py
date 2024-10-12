@@ -1,7 +1,13 @@
-import requests
+from dotenv import load_dotenv
+import os
 
-# Store your OpenAQ API Key
-API_KEY = '2110b57c7a15e553abdd4542f3fa60f4dbe4bc773e495b046b057e9dbbdc544d'
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the API_KEY from the .env file
+API_KEY = os.getenv('API_KEY')
+
+import requests
 
 # Function to fetch air quality data from OpenAQ
 def get_air_quality_data(lat, lon):

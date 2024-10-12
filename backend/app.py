@@ -1,12 +1,18 @@
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the API_KEY from the environment
+API_KEY = os.getenv('API_KEY')
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS  # Import the CORS library
 import requests
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for the entire Flask app
-
-# API Key for OpenAQ API
-API_KEY = '2110b57c7a15e553abdd4542f3fa60f4dbe4bc773e495b046b057e9dbbdc544d'
 
 # Proxy route to fetch air quality stations from OpenAQ
 @app.route('/api/stations', methods=['GET'])
