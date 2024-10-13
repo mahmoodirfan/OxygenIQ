@@ -12,9 +12,6 @@ __pycache__/
 logs/
 *.log
 
-# React build folder
-/build
-
 # Miscellaneous
 .DS_Store
 .idea/
