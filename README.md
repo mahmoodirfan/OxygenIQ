@@ -2,6 +2,13 @@
 
 OxygenIQ is an interactive web application that provides real-time air quality data from various locations around the world. The app leverages the OpenAQ API to display data on pollutants like PM2.5 and PM10, and provides an intuitive, interactive map for users to select locations or input coordinates manually to retrieve air quality information.
 
+### Contact
+This repository only includes the frontend part of the application. To obtain full access (including both frontend and backend), please contact me via email:
+
+**Email**: irfan.koreshe@gmail.com / irfan-mahmood@outlook.com
+
+For any further assistance or inquiries, feel free to reach out.
+
 Features
 Real-Time Data: Fetch air quality data from OpenAQ, displaying pollutant levels such as PM2.5, PM10, and more.
 Interactive Map: Users can select locations by clicking on an interactive map.
